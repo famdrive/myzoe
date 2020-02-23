@@ -8,4 +8,6 @@ just adapt the credentials file with usernames, passwords and VID Number, and st
   or
 bash zoe.sh
 
-  
+Output are json snippets.
+
+I may will add parameters for diffrent output formats.  
