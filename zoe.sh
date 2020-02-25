@@ -9,7 +9,9 @@ function jsonGet {
 	 var=$1
 	  json=$2
 
-	   echo $(echo $json|perl -pe 's/^.*?"'$var'":.*?"(.*?)".*$/$1/g')
+	  #   echo $(echo $json|perl -pe 's/^.*?"'$var'":.*?"(.*?)".*$/$1/g')
+    # more tolerant approach for a json string 
+	echo $(echo $json|perl -pe 's/^.*?"'$var'": ?|"?(.+?)(\}|,|"|$).*$/$1/g')
 
    }
 
